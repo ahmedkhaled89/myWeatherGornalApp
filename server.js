@@ -23,3 +23,11 @@ const server = app.listen(port, listening);
 function listening(){
     console.log(`WJA Running On Port ${port}`)
 }
+
+//post request to add data to server end point
+app.post('/add', addWeatherData);
+function addWeatherData(req, res){
+    projectData = req.body;
+    console.log("received data from clint side",projectData);
+
+}
