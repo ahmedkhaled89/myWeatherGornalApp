@@ -8,6 +8,12 @@ const express = require('express');
 // Start up an instance of app
 const app = express();
 
+//body barser
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
 /* Middleware*/
 /* Dependencies */
 // Cors for cross origin allowance
@@ -23,11 +29,15 @@ const server = app.listen(port, listening);
 function listening(){
     console.log(`WJA Running On Port ${port}`)
 }
-
+app.get('/', (req, res) => {
+    res.send('hello')
+})
 //post request to add data to server end point
 app.post('/addWeatherData', addWeatherData);
+
 function addWeatherData(req, res){
     projectData = req.body;
-    console.log("received data from clint side",projectData);
-
+    console.log("data added to project", projectData)
+    console.log(req.body);
+    res.send(projectData);
 }
