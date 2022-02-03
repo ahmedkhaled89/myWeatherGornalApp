@@ -41,3 +41,9 @@ function addWeatherData(req, res){
     console.log(req.body);
     res.send(projectData);
 }
+
+// GET Rout
+app.get('/all', sendData);
+function sendData(req, res){
+    res.send(projectData);
+}
