@@ -48,5 +48,17 @@ const postData = async (url ='', data = {}) => {
 
 }
 
+const updateUI = async () => {
+    const res = await fetch('/all');
+    try{
+        console.log('update UI Function')
+        const weatherData = await res.json();
+        console.log(weatherData);
+    }catch(error){
+        console.log("error", error)
+    }
+}
+
 //getData('https://api.openweathermap.org/data/2.5/weather?zip=', '&appid=ae8dc7d1b918f20a8becea7657780e34', '94040')
-postData('/addWeatherData', {date: newDate, temp:'5264waadsfs', content:"hahahah"})
+//postData('/addWeatherData', {date: newDate, temp:'5264waadsfs', content:"hahahah"})
+//updateUI()
