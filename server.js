@@ -25,7 +25,7 @@ function listening(){
 }
 
 //post request to add data to server end point
-app.post('/add', addWeatherData);
+app.post('/addWeatherData', addWeatherData);
 function addWeatherData(req, res){
     projectData = req.body;
     console.log("received data from clint side",projectData);
