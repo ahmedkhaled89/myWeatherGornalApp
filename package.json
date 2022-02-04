@@ -1,0 +1,20 @@
+{
+  "name": "myweatherjornalapp",
+  "version": "1.0.0",
+  "description": "myWratherJornalApp Dependencies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedkhaled89/myWeatherJornalApp.git"
+  },
+  "author": "Ahmed Khaled ahmedkhaled8901@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedkhaled89/myWeatherJornalApp/issues"
+  },
+  "homepage": "https://github.com/ahmedkhaled89/myWeatherJornalApp#readme"
+}
