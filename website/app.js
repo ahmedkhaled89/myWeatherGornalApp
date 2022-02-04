@@ -1,6 +1,6 @@
 /* Global Variables */
 // Personal API Key for OpenWeatherMap API
-const apiKey = '&appid=ae8dc7d1b918f20a8becea7657780e34';
+const apiKey = '&appid=ae8dc7d1b918f20a8becea7657780e34&units=metric';
 const url = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 
 
@@ -25,7 +25,7 @@ async function doSomthing(event){
 }
 /* Function to GET Web API Data*/
 const getData = async (url, apiKey, zip) => {
-    const apiLink = url + zip + ',us'+ '&units=metric' +apiKey ;
+    const apiLink = url + zip + ',us'+ apiKey ;
     console.log(apiLink)
     const response = await fetch(apiLink);
     console.log(response);
