@@ -10,15 +10,16 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //Add Event Listener to the Generate Button
 document.getElementById('generate').addEventListener('click', doSomthing);
-function doSomthing(event){
+async function doSomthing(event){
     const zip = document.getElementById('zip').value;
     console.log(zip);
     const comment = document.getElementById('feelings').value;
     console.log(comment)
-    getData(url,apiKey,zip).then(data =>{
-        postData('/addWeatherData', {date: newDate, temp:data, content:comment})
-    }).then(
+  await getData(url,apiKey,zip).then(data =>{
+         postData('/addWeatherData', {date: newDate, temp:data, content:comment})
+    }).then( () =>{
         updateUI()
+    }
     )
 
 }
