@@ -24,7 +24,7 @@ function doSomthing(event){
 }
 /* Function to GET Web API Data*/
 const getData = async (url, apiKey, zip) => {
-    const apiLink = url + zip + ',us' +apiKey;
+    const apiLink = url + zip + ',us'+ '&units=metric' +apiKey ;
     console.log(apiLink)
     const response = await fetch(apiLink);
     console.log(response);
