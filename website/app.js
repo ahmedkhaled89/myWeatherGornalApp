@@ -74,7 +74,7 @@ const updateUI = async () => {
         const weatherData = await res.json();
         console.log(weatherData);
         document.getElementById('date').innerHTML =weatherData.date;
-        document.getElementById('temp').innerHTML = weatherData.temp;
+        document.getElementById('temp').innerHTML = Math.round(weatherData.temp) + ' degrees';
         document.getElementById('content').innerHTML = weatherData.content;
     }catch(error){
         console.log("error", error)
