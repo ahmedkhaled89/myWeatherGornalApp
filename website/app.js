@@ -15,8 +15,8 @@ async function doSomthing(event){
     console.log(zip);
     const comment = document.getElementById('feelings').value;
     console.log(comment)
-  await getData(url,apiKey,zip).then(data =>{
-         postData('/addWeatherData', {date: newDate, temp:data, content:comment})
+  getData(url,apiKey,zip).then(data =>{
+        return postData('/addWeatherData', {date: newDate, temp:data, content:comment})
     }).then( () =>{
         updateUI()
     }
